@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twin Bridges Card Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <table border="0" class="main-table">
+        <tr>
+            <td>
+                <table border="0" cellspacing="1" cellpadding="0" class="table">
+                    <tr>
+                        <td colspan="2" align="center" class="head-cell">Twin Bridges Card Designer</td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Name</td>
+                        <td><input type="text" class="input" id="name" /></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Type</td>
+                        <td><select id="cardtype" class="input-field">
+                                <option value="Movement">Movement</option>
+                                <option value="Spell">Spell</option>
+                                <option value="Object">Object</option>
+                                <option value="Counter">Counter</option>
+                                <option value="Boost">Boost</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">In Colour?</td>
+                        <td><select id="blackwhite" class="input-field">
+                                <option value="Colour">Colour</option>
+                                <option value="Monochrome">Monochrome</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Picture</td>
+                        <td>
+                            <input type="file" class="button" id="file"/>
+                            <i class="cell-italic">Dimensions: 224x128</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Body
+                            <div class="tooltip">
+                                <img src="Assets/information.png" class="info">
+                            <span class="tooltiptext">To put special characters in the text, use the following character codes:
+                                <table>
+                                    <tr>
+                                        <td>Code</td>
+                                        <td>Symbol</td>
+                                        <td>Card Type</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{B}</td>
+                                        <td><img src="Assets/cardtype_boost.png" width="16px" height="16px"></td>
+                                        <td>Boost</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{C}</td>
+                                        <td><img src="Assets/cardtype_counter.png" width="16px" height="16px"></td>
+                                        <td>Counter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{M}</td>
+                                        <td><img src="Assets/cardtype_movement.png" width="16px" height="16px"></td>
+                                        <td>Movement</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{O}</td>
+                                        <td><img src="Assets/cardtype_object.png" width="16px" height="16px"></td>
+                                        <td>Object</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{S}</td>
+                                        <td><img src="Assets/cardtype_spell.png" width="16px" height="16px"></td>
+                                        <td>Spell</td>
+                                    </tr>
+                                </table>
+                            </span>
+                            </div>
+                        </td>
+                        <td><textarea id="card_effect" class="input-long" cols="50" rows="4"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" colspan="2" align="center"><input id="update" type="button" class="button" value="Update" onclick="updatecard()" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="cell-italic"><i>Right click on the card: "Save image as..." to download your image.</i></td>
+                    </tr>
+                </table>
+            </td>
+            <td class="cell"><canvas id="canvas" width=256 height=384></canvas></td>
+        </tr>
+    </table>
+</body>
+
+</html>

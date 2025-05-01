@@ -1,0 +1,90 @@
+body {
+    font-family: Verdana, sans-serif;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #fff;
+    background-position: center;
+}
+
+.main-table {
+    background-color: #eee;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    background-color: #ccc;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-cell {
+    font-size: 16pt;
+    justify-content: center;
+    padding: 6px;
+}
+
+.cell {
+    font-size: 12pt;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: left;
+    padding: 2px;
+}
+
+.cell-italic {
+    font-size: 10pt;
+    word-wrap: break-word;
+    padding: 2px 4px;
+}
+
+.button {
+    padding: 4px 8px;
+    font-size: 12pt;
+}
+
+.input {
+    font-size: 12pt;
+}
+
+.input-long {
+    font-size: 10pt;
+    height: 64px;
+}
+
+.input-field {
+    font-size: 12pt;
+}
+
+.info {
+    padding-left: 4px;
+    width: 14px;
+    height: 14px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 8pt;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
